@@ -10,7 +10,6 @@ import { RootModel } from '../models/root.model';
 })
 export class HomeComponent implements OnInit {
   states: any[] = [];
-
   constructor(private apiService: ApiClientService) {}
 
   ngOnInit(): void {
