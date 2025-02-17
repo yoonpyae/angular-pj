@@ -1,1 +1,7 @@
 <p>township works!</p>
+<div *ngFor="let item of townships">
+  <div class="card">
+    <h4 style="margin: 0px">{{ item.townshipName }}</h4>
+    <span>{{ item.stateName }}</span>
+  </div>
+</div>
