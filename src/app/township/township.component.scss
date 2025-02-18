@@ -1,7 +1,38 @@
+* {
+  font-family: monospace;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
 .card {
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 5px 10px 5px 20px;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin: 0rem 15rem 1rem 15rem;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(255, 0, 191, 0.2);
+  }
+}
+
+h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #000;
+}
+
+span {
+  font-size: 14px;
+  color: #666;
 }
