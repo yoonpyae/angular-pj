@@ -1,8 +1,37 @@
-<p>township works!</p>
-<div class="grid-container">
-  <div *ngFor="let item of townships" class="card">
-    <span>{{ item.townshipId }}</span>
-    <h4 style="margin: 0px">{{ item.townshipName }}</h4>
-    <span>{{ item.stateName }}</span>
+<div class="flex justify-between gap-2">
+  <a
+    href="#"
+    class="inline-flex items-center border border-teal-300 px-3 py-1.5 rounded-md text-teal-500 hover:bg-teal-50"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      class="h-6 w-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M7 16l-4-4m0 0l4-4m-4 4h18"
+      ></path>
+    </svg>
+    <span class="ml-1 font-bold text-lg">Back</span>
+  </a>
+</div>
+<h2
+  class="text-center text-2xl uppercase font-bold border-b-2 border-solid p-3 border-teal-800"
+>
+  Township List
+</h2>
+<div class="grid grid-cols-4 gap-4 p-8">
+  <div
+    *ngFor="let item of townships"
+    class="text-center items-center flex flex-col p-8 card rounded-xl shadow-lg"
+  >
+    <span class="text-sm text-stone-600">{{ item.townshipId }}</span>
+    <h4 class="text-lg text-stone-800 font-bold">{{ item.townshipName }}</h4>
+    <span class="text-sm text-stone-600">{{ item.stateName }}</span>
   </div>
 </div>

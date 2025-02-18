@@ -2,61 +2,12 @@
   font-family: monospace;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); // 4 columns by default
-  gap: 20px; // Adds spacing between cards
-  padding: 20px;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
 .card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Soft shadow for depth
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #fff8a7; // Light border for subtle separation
-
-  span {
-    font-size: 14px;
-    color: #555555;
-  }
-
-  h4 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin: 8px 0;
-  }
+  border: 1px solid #fff8a7;
 
   &:hover {
     transform: translateY(-5px); // Slight lift effect
     box-shadow: 0 6px 12px rgba(0, 247, 255, 0.15);
-  }
-}
-
-// Responsive Adjustments
-@media (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr); // 3 columns for tablets
-  }
-}
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr); // 2 columns for smaller screens
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-container {
-    grid-template-columns: 1fr; // 1 column for mobile
   }
 }
