@@ -9,6 +9,9 @@ import { RootModel } from '../models/root.model';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
+  navigateToTownship() {
+    throw new Error('Method not implemented.');
+  }
   states: any[] = [];
   constructor(private apiService: ApiClientService) {}
 
