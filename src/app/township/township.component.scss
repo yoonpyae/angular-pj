@@ -4,46 +4,45 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); // Ensures 4 columns
-  gap: 15px; // Adds spacing
-  padding: 10px;
-  width: 100%; // Ensures the container does not overflow
-  max-width: 100%; // Prevents horizontal scrolling
-  box-sizing: border-box; // Includes padding in width calculation
-  overflow-x: hidden; // Prevents horizontal scroll
+  grid-template-columns: repeat(4, 1fr); // 4 columns by default
+  gap: 20px; // Adds spacing between cards
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
+
 .card {
-  border: 1px solid #ddd;
-  padding: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
   text-align: center;
-  background: #fff;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; // Ensures it fits within grid columns
-  box-sizing: border-box; // Includes padding in width calculation
-  transition: box-shadow 0.3s ease, transform 0.3s ease; // Smooth transition for hover effects
+  border: 1px solid #fff8a7; // Light border for subtle separation
+
+  span {
+    font-size: 14px;
+    color: #555555;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 8px 0;
+  }
 
   &:hover {
-    box-shadow: 4px 4px 10px rgba(255, 0, 149, 0.2);
-    transform: translateY(-5px); // Slightly lifts the card
+    transform: translateY(-5px); // Slight lift effect
+    box-shadow: 0 6px 12px rgba(0, 247, 255, 0.15);
   }
 }
 
-h4 {
-  margin: 0;
-  font-size: 18px;
-  color: #000;
-}
-
-span {
-  font-size: 14px;
-  color: #666;
-}
-
-// Responsive Design
+// Responsive Adjustments
 @media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(3, 1fr); // 3 columns for tablets
