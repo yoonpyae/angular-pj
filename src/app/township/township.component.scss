@@ -2,27 +2,33 @@
   font-family: monospace;
 }
 
-p {
-  font-size: 16px;
-  color: #333;
-}
-
-.card {
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
-
-  background-color: #fff;
-  transition: box-shadow 0.3s ease;
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr); // Ensures 4 columns
+  gap: 15px; // Adds spacing
+  padding: 10px;
+  width: 100%; // Ensures the container does not overflow
+  max-width: 100%; // Prevents horizontal scrolling
+  box-sizing: border-box; // Includes padding in width calculation
+  overflow-x: hidden; // Prevents horizontal scroll
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
   text-align: center;
-  margin: 0rem 15rem 1rem 15rem;
+  background: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; // Ensures it fits within grid columns
+  box-sizing: border-box; // Includes padding in width calculation
+  transition: box-shadow 0.3s ease, transform 0.3s ease; // Smooth transition for hover effects
 
   &:hover {
-    box-shadow: 0 8px 16px rgba(255, 0, 191, 0.2);
+    box-shadow: 4px 4px 10px rgba(255, 0, 149, 0.2);
+    transform: translateY(-5px); // Slightly lifts the card
   }
 }
 
@@ -35,4 +41,23 @@ h4 {
 span {
   font-size: 14px;
   color: #666;
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); // 3 columns for tablets
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); // 2 columns for smaller screens
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; // 1 column for mobile
+  }
 }
