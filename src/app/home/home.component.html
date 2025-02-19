@@ -1,10 +1,12 @@
 <div
-  class="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-gray-100 to-teal-100 p-6"
+  class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-teal-100 p-6"
 >
-  <h1 class="text-4xl font-bold text-gray-800 mb-2">
+  <!-- Heading -->
+  <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center mb-4">
     Welcome to Our Home Page
   </h1>
 
+  <!-- Explore Button -->
   <div class="mt-4">
     <a href="http://localhost:4200/township">
       <button
@@ -28,28 +30,35 @@
       </button>
     </a>
   </div>
-  <div class="sm:flex items-center max-w-screen-xl">
-    <div class="sm:w-1/2 p-10">
-      <div class="image object-center text-center w-120">
-        <img src="about.png" alt="" />
-      </div>
+
+  <!-- About Section -->
+  <div
+    class="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center mt-12"
+  >
+    <!-- Image Section -->
+    <div class="w-full lg:w-1/2 p-5 flex justify-center">
+      <img
+        src="about.png"
+        alt="About Us"
+        class="w-full max-w-sm sm:max-w-md lg:max-w-lg"
+      />
     </div>
-    <div class="sm:w-1/2 p-5">
-      <div class="text">
-        <a href="http://localhost:4200/about">
-          <span class="text-gray-500 border-b-2 border-teal-600 uppercase"
-            >About us</span
-          >
-        </a>
-        <h2 class="my-4 font-bold text-3xl sm:text-4xl">
-          About <span class="text-teal-600">Our Company</span>
-        </h2>
-        <p class="text-gray-700">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-          commodi doloremque, fugiat illum magni minus nisi nulla numquam
-          obcaecati placeat quia, repellat tempore voluptatum.
-        </p>
-      </div>
+
+    <!-- Text Section -->
+    <div class="w-full lg:w-1/2 p-5 text-center lg:text-left">
+      <a href="http://localhost:4200/about">
+        <span class="text-gray-500 border-b-2 border-teal-600 uppercase text-sm"
+          >About us</span
+        >
+      </a>
+      <h2 class="my-4 font-bold text-2xl sm:text-3xl md:text-4xl">
+        About <span class="text-teal-600">Our Company</span>
+      </h2>
+      <p class="text-gray-700 leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+        commodi doloremque, fugiat illum magni minus nisi nulla numquam
+        obcaecati placeat quia, repellat tempore voluptatum.
+      </p>
     </div>
   </div>
 </div>

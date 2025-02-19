@@ -20,18 +20,63 @@
     <span class="ml-1 font-bold text-lg">Back</span>
   </a>
 </div>
-<h2
-  class="text-center text-2xl uppercase font-bold border-b-2 border-solid p-3 border-teal-800"
->
-  Township List
-</h2>
-<div class="grid grid-cols-4 gap-4 p-8">
-  <div
-    *ngFor="let item of townships"
-    class="text-center items-center flex flex-col p-8 card rounded-xl shadow-lg"
-  >
-    <span class="text-sm text-stone-600">{{ item.townshipId }}</span>
-    <h4 class="text-lg text-stone-800 font-bold">{{ item.townshipName }}</h4>
-    <span class="text-sm text-stone-600">{{ item.stateName }}</span>
+<div class="flex flex-col h-screen w-screen">
+  <div class="overflow-x-auto flex-1">
+    <div class="py-4 px-6">
+      <div
+        class="overflow-hidden border border-teal-300 rounded-lg shadow-lg bg-white"
+      >
+        <table class="w-full border-collapse">
+          <thead class="bg-teal-100 border-b">
+            <tr>
+              <th class="text-sm font-medium text-teal-900 px-6 py-4 text-left">
+                ID
+              </th>
+              <th class="text-sm font-medium text-teal-900 px-6 py-4 text-left">
+                Township Name
+              </th>
+              <th class="text-sm font-medium text-teal-900 px-6 py-4 text-left">
+                townshipNameMm
+              </th>
+              <th class="text-sm font-medium text-teal-900 px-6 py-4 text-left">
+                State Name
+              </th>
+              <th class="text-sm font-medium text-teal-900 px-6 py-4 text-left">
+                stateNameMm
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b" *ngFor="let item of townships">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-teal-900"
+              >
+                {{ item.townshipId }}
+              </td>
+              <td
+                class="text-sm text-teal-900 font-light px-6 py-4 whitespace-nowrap"
+              >
+                {{ item.townshipName }}
+              </td>
+              <td
+                class="text-sm text-teal-900 font-light px-6 py-4 whitespace-nowrap"
+              >
+                {{ item.townshipNameMm }}
+              </td>
+              <td
+                class="text-sm text-teal-900 font-light px-6 py-4 whitespace-nowrap"
+              >
+                {{ item.stateName }}
+              </td>
+              <td
+                class="text-sm text-teal-900 font-light px-6 py-4 whitespace-nowrap"
+              >
+                {{ item.stateNameMm }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
