@@ -1,0 +1,69 @@
+<div
+  class="items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-teal-100 p-6"
+>
+  <div class="card flex justify-center gap-4">
+    <p-button label="Check" />
+    <p-colorpicker [(ngModel)]="color" />
+  </div>
+
+  <br />
+
+  <br />
+
+  <div class="card flex justify-center">
+    <p-inputgroup class="w-full md:!w-[30rem]">
+      <p-inputgroup-addon>
+        <i class="pi pi-clock"></i>
+      </p-inputgroup-addon>
+      <p-inputgroup-addon>
+        <i class="pi pi-star-fill"></i>
+      </p-inputgroup-addon>
+      <input type="text" pInputText placeholder="Price" />
+      <p-inputgroup-addon>$</p-inputgroup-addon>
+      <p-inputgroup-addon>.00</p-inputgroup-addon>
+    </p-inputgroup>
+  </div>
+
+  <br />
+
+  <div class="card flex justify-center">
+    <p-button (click)="showDialog()" label="Show" />
+    <p-dialog
+      header="Edit Profile"
+      [modal]="true"
+      [(visible)]="visible"
+      [style]="{ width: '25rem' }"
+    >
+      <span class="p-text-secondary block mb-8">Update your information.</span>
+      <div class="flex items-center gap-4 mb-4">
+        <label for="username" class="font-semibold w-24">Username</label>
+        <input pInputText id="username" class="flex-auto" autocomplete="off" />
+      </div>
+      <div class="flex items-center gap-4 mb-8">
+        <label for="email" class="font-semibold w-24">Email</label>
+        <input pInputText id="email" class="flex-auto" autocomplete="off" />
+      </div>
+      <div class="flex justify-end gap-2">
+        <p-button
+          label="Cancel"
+          severity="secondary"
+          (click)="visible = false"
+        />
+        <p-button label="Save" (click)="visible = false" />
+      </div>
+    </p-dialog>
+  </div>
+
+  <br />
+  <div class="card flex justify-center gap-2">
+    <p-toast />
+    <p-confirmdialog />
+    <p-button (click)="confirm1($event)" label="Save" [outlined]="true" />
+    <p-button
+      (click)="confirm2($event)"
+      label="Delete"
+      severity="danger"
+      [outlined]="true"
+    />
+  </div>
+</div>
